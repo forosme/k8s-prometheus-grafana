@@ -7,10 +7,13 @@ metadata:
   labels:
     k8s-app: node-exporter
 spec:
+  selector:
+    matchLabels:
+      app: node-exporter 
   template:
     metadata:
       labels:
-        k8s-app: node-exporter
+        app: node-exporter
     spec:
       containers:
       - image: prom/node-exporter
@@ -31,8 +34,8 @@ spec:
   ports:
   - name: http
     port: 9100
-    nodePort: 31672
+    nodePort: 32672
     protocol: TCP
   type: NodePort
   selector:
-    k8s-app: node-exporter
+    app: node-exporter
