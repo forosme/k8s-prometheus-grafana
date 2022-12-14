@@ -34,7 +34,7 @@ spec:
   ports:
   - name: http
     port: 9100
-    nodePort: 32672
+    nodePort: 31672
     protocol: TCP
   type: NodePort
   selector:
